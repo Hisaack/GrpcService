@@ -1,0 +1,23 @@
+
+syntax = "proto3";
+
+option csharp_namespace = "GrpcServiceDemo2";
+
+package subtract;
+
+// The greeting service definition.
+service Subtract {
+  // Sends a greeting
+  rpc Subract (SubtractRequest) returns (SubtractResponse);
+}
+
+// The request message containing the user's name.
+message SubtractRequest {
+  int32 number1 = 1;
+  int32 number2 = 2;
+}
+
+// The response message containing the greetings.
+message SubtractResponse {
+  int32 result = 1;
+}
